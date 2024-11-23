@@ -50,7 +50,7 @@ export async function updatePost(req, res) {
         };
 
         const postAtualizado = await atualizarPost(id, post);
-        res.status(200).json(postCriado);  
+        res.status(200).json(postAtualizado);  
     } catch(erro) {
         console.error(erro.message);
         res.status(500).json({"Erro":"Falha na requisição"});
